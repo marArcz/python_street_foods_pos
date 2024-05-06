@@ -1,0 +1,24 @@
+{
+    "products":[
+        {
+            "name":"Salted Fries",
+            "price":"25",
+            "image":"salted-fries.png"
+        },
+        {
+            "name":"Sour Cheese Fries",
+            "price":"45",
+            "image":"sour-cheese-fries.png"
+        },
+        {
+            "name":"Fishball",
+            "price":"10",
+            "image":"fishball.png"
+        },
+        {
+            "name":"Kwek-kwek",
+            "price":"20",
+            "image":"kwek-kwek.png"
+        }
+    ]
+}

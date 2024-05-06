@@ -40,7 +40,6 @@ class Gui:
         self.cashierImage = tk.PhotoImage(file=self.assets('cashier.png'),width=57,height=57)
         self.cashierImageLabel = tk.Label(self.loginBoxHeader,image=self.cashierImage,background=self.BG_COLOR)
         self.cashierImageLabel.grid(row=0,column=0,rowspan=2)
-
         self.label1 = tk.Label(self.loginBoxHeader,text='Welcome!',anchor='w',font=('Arial',14,'bold'),background='#F5F5F5')
         self.label1.grid(row=0,column=1,sticky='w',padx=10)
 
@@ -49,36 +48,20 @@ class Gui:
 
         #login button
         self.loginBtnImage = tk.PhotoImage(file=self.assets('Button.png'))
-        self.loginBtn = tk.Button(self.loginBox, image=self.loginBtnImage,borderwidth=0,highlightthickness=0,relief='flat',background='#F5F5F5',command=self.showDialog)
+        self.loginBtn = tk.Button(self.loginBox, image=self.loginBtnImage,borderwidth=0,highlightthickness=0, relief='flat',background='#F5F5F5',command=self.showDialog)
         self.loginBtn.grid(row=1,column=0,pady=20)
 
         self.loginFrame = tk.Frame(self.root)
         self.loginFrame.pack(side='left',fill='x',expand=True)
 
-        self.label = tk.Label(self.loginFrame,text='Please enter your pin:',font=('Arial',12),anchor='w')
-        self.label.grid(row=0,column=0,sticky='w')
         self.userPin = ""
-        self.entry = tk.Entry(self.loginFrame,textvariable=self.userPin,font=('Arial',16),vcmd=self.login)
-        self.entry.bind("<Keypress>")
-        self.entry.grid(row=1,column=0,pady=5)
-
-        self.button = tk.Button(self.loginFrame,text='GO',font=('Arial',12,'bold'),background='#7390a5',foreground='white',bd=0,command=self.login)
-        self.button.grid(row=1,column=1)
-
         self.loginFrame.pack(side='left',fill='x',expand=True)
 
+        self.root.resizable(False,False)
         self.root.mainloop()
 
     def assets(self,filename):
         return './assets/' + filename
     def showDialog(self):
-        pass
-    def login(self):
-        f = open('pin.txt','r')
-        pin = f.read()
-        if(self.entry.get() == pin):
-            messagebox.showinfo('Logging in',"Successfully logged in!")
-        else:
-            messagebox.showinfo('Logging in',"Sorry, you entered an incorrect pin!")   
-
+        loginDialog.Gui(self.root)   
 Gui()
