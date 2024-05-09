@@ -21,7 +21,7 @@ class Gui:
         self.headerTextFrame = tk.Frame(self.headerFrame,background='#2c91d8')
         self.headerTextFrame.grid(row=0,column=1)
 
-        self.appNameLabel = tk.Label(self.headerTextFrame,text='Street Foods',font=('Arial',18,'bold'),background='#2c91d8',foreground='white')
+        self.appNameLabel = tk.Label(self.headerTextFrame,text='Amilasan\'s Streetfoods',font=('Arial',18,'bold'),background='#2c91d8',foreground='white')
         self.appNameLabel.grid(row=0,column=1,sticky='w')
 
         self.appSubnameLabel = tk.Label(self.headerTextFrame,text='POINT OF SALES SYSTEM',font=('Arial',12),background='#2c91d8',foreground='white')
@@ -156,7 +156,7 @@ class Gui:
         change = int(self.paymentBox.get()) - int(self.getTotal())
         self.changeBox.insert(0,str(change))
 
-        self.receiptBox.insert(index='end-1c',chars="\tStreet Foods\n")
+        self.receiptBox.insert(index='end-1c',chars="    Amilasan's Streetfoods\n")
         self.receiptBox.insert(index='end-1c',chars="\t"+datetime.datetime.now().strftime('%B %d, %Y')+"\n\n")
         
         for order in self.orders:

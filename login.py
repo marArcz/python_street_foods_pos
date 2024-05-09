@@ -20,7 +20,7 @@ class Gui:
         self.titleFrame.columnconfigure(0,pad=30)
         self.textFrame = tk.Frame(self.titleFrame,background='#F5F5F5')
         self.textFrame.grid(row=0,column=0)
-        self.titleLabel = tk.Label(self.textFrame,text='Street Foods',font=('Arial',18,'bold'),anchor='nw',background='#F5F5F5')
+        self.titleLabel = tk.Label(self.textFrame,text='Amilasan\'s Streetfoods',font=('Arial',18,'bold'),anchor='nw',background='#F5F5F5')
         self.titleLabel.grid(row=0,column=0,sticky=tk.W+tk.E)
         self.subtitleLabel = tk.Label(self.textFrame,text='POINT OF SALES SYSTEM',font=('Arial',10),anchor='nw')
         self.subtitleLabel.grid(row=1,column=0,sticky=tk.W+tk.E)
