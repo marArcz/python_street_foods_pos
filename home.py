@@ -177,6 +177,8 @@ class Gui:
         self.displayOrders()
         self.receiptBox.delete('1.0','end')
         self.paymentBox.delete(0,len(self.paymentBox.get()))
+        self.changeBox.delete(0,len(self.changeBox.get()))
+        
     def displayProducts(self):
         
         col=0

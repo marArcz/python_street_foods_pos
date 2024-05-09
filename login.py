@@ -10,6 +10,7 @@ class Gui:
         self.root = tk.Tk()
         self.root.geometry("800x500")
         self.root.title('Street Foods')
+        self.root.eval('tk::PlaceWindow . center')
 
         self.mainframe = tk.Frame(self.root,background='#F5F5F5')
         self.mainframe.pack(fill='both')
@@ -57,6 +58,7 @@ class Gui:
         self.userPin = ""
         self.loginFrame.pack(side='left',fill='x',expand=True)
 
+        self.root.eval('tk::PlaceWindow . center')
         self.root.resizable(False,False)
         self.root.mainloop()
 
